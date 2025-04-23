@@ -1,0 +1,280 @@
+/* Style definition */
+:root {
+    --edit-bg-color: white;
+    --edit-font-color: black;
+    --headline-color: grey;
+
+    /* theme */
+
+    /* ligth */
+    --bg-color: #efefef;
+    --font-color: black;
+    --item-bg-color: #003d74;
+    --item-font-color: #d3e1ef;
+    --shade-color: grey;
+
+    /* menu-item hover */
+    --item-bg-rev-color: #eda01f;
+    --item-font-rev-color: white;
+
+    --label-color: green;
+
+    /* dark */
+    /* --bg-color: #1e2732;
+    --font-color: #d1e4ef;
+    --item-bg-color: #98b6c2;
+    --item-font-color: #000000;
+    --shade-color: rgb(21, 219, 255); */
+
+    /* menu-item hover */
+    /* --item-bg-rev-color: #547689;
+    --item-font-rev-color: #d1e4ef; */
+}
+
+@font-face {
+    font-family: 'logo';
+    src: url('./Aclonica-Regular-2.ttf');
+}
+
+/* Global css default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微软雅黑;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+textarea {
+    outline: none;
+}
+/* Global animation */
+
+.list-enter-active,
+.list-leave-active {
+    transition: all 0.25s ease;
+}
+
+.list-enter-from {
+    transform: translate(0, 100%);
+    opacity: 0;
+}
+.list-enter-to {
+    transform: translate(0, -100%);
+    opacity: 0;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+    transition: 0.25s;
+}
+
+.slide-l-enter-from,
+.slide-l-leave-to {
+    opacity: 0;
+    transform: translate(-100%, 0);
+}
+.slide-l-enter-active,
+.slide-l-leave-active {
+    transition: opacity transform 1s;
+}
+
+.img-fade-enter-from,
+.img-fade-leave-to {
+    opacity: 0;
+}
+.img-fade-enter-active,
+.img-fade-leave-active {
+    transition: 0.2s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -10%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes show {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* shared animation */
+.fade-in {
+    animation: fade 0.25s ease-in forwards;
+}
+
+/* layout */
+.wrapper {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.flex-row-left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.flex-row-right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: right;
+    align-items: center;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row-evenly {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-row-between {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-evenly {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* input \ button \ textarea \ a */
+.inputItem {
+    padding-left: 0.5em;
+    height: 48px;
+    border: 1px solid var(--item-bg-color);
+    border-radius: 4px;
+    background-color: var(--edit-bg-color);
+}
+
+input[type='radio'] {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0 8px 0 16px;
+    width: 20px;
+    height: 32px;
+}
+
+input[type='radio']::before {
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    background: var(--bg-color);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: bold;
+    color: var(--item-bg-color);
+    border: 1px solid var(--item-bg-color);
+    border-radius: 4px;
+}
+/** 选中的样式 */
+input[type='radio']:checked::before {
+    content: '\2713'; /* 2713表示勾勾✓ */
+}
+
+.textareaItem {
+    position: relative;
+    padding: 1em;
+    width: 85%;
+    resize: none;
+    font-size: 16px;
+    word-spacing: 1em;
+    line-height: 1.5em;
+    color: grey;
+    border-radius: 4px;
+    overflow-y: auto;
+}
+.textareaItem:focus {
+    color: var(--edit-font-color);
+    box-shadow: 0 0 10px 2px var(--item-bg-color) inset;
+    transition-duration: 0.2s;
+}
+
+a {
+    cursor: pointer;
+    color: var(--bg-font-color);
+    transition: 0.25s;
+}
+a:hover {
+    color: var(--item-bg-rev-color);
+}

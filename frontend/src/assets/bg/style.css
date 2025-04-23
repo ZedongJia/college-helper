@@ -1,0 +1,18 @@
+#injection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('bg.webp');
+    background-size: cover;
+    overflow: hidden;
+}
+.segment {
+    position: absolute;
+    width: 35vw;
+    height: 35vh;
+    border: none;
+    background: transparent;
+    box-shadow: 0 0 100px 5px black;
+}

@@ -1,0 +1,168 @@
+/* 标签 */
+.itemLabel {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 20px;
+    max-width: 500px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: var(--item-bg-color);
+    color: var(--item-font-color);
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+/* 两列 */
+.detail-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+.detail-layout > :nth-child(1) {
+    flex: 0 0 calc(100% - 400px);
+}
+.detail-layout > :nth-child(2) {
+    flex: 0 0 350px;
+}
+
+.detail-layout .line {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.detail-title {
+    background-color: rgb(255, 106, 106);
+    margin-bottom: 10px;
+    width: 220px;
+    border-radius: 50px;
+}
+
+.detail-header .icon,
+.detail-title .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+}
+
+/* 左列： 表格 —— 键 + 值 */
+.key,
+.value {
+    display: inline-block;
+    width: 50%;
+    padding: 1%;
+}
+.key {
+    font-weight: bold;
+}
+
+.info-list > * {
+    margin-bottom: 5px;
+    width: 100%;
+    line-height: 32px;
+    height: 32px;
+    text-align: center;
+}
+.info-list > * > span:nth-child(1) {
+    width: 45%;
+    padding: 0 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 25px;
+    background-color: var(--label-color);
+}
+.info-list > * > span:nth-child(2) {
+    margin: 0 0.5em;
+}
+
+.detail-content {
+    position: relative;
+    padding: 0 1em;
+    width: 100%;
+}
+
+.detail-content > div {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.detail-content .detail-key {
+    margin: 5px 0;
+    margin-right: 5px;
+    min-width: 100px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50px 0 50px 0;
+    background-color: orange;
+    color: var(--font-color);
+}
+
+.detail-content .detail-value {
+    max-width: 500px;
+}
+
+.detail-content p {
+    text-indent: 2em;
+    line-height: 2em;
+}
+
+.detail-content img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.detail-content .img-to-left,
+.detail-content .img-to-right {
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    color: var(--font-color);
+}
+
+.detail-content .img-to-left {
+    left: 5%;
+}
+
+.detail-content .img-to-right {
+    right: 5%;
+}
+
+.detail-layout .star {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 26px;
+    width: 48px;
+    height: 48px;
+    transition: .25s;
+}
+.detail-layout .star:hover {
+    color: yellow;
+}
+
+.detail-layout .hasStar {
+    position: absolute;
+    right: 0;
+    top: 26px;
+    width: 48px;
+    height: 48px;
+    transition: .25s;
+    cursor: default;
+    color: yellow;
+}

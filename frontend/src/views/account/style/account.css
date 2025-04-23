@@ -1,0 +1,131 @@
+.error-prompt {
+    z-index: 200;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    padding: 10px 0;
+    min-width: 1px;
+    height: 20px;
+    font-size: 12px;
+    color: red;
+}
+
+#account-form {
+    z-index: 50;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 20px 60px;
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09),
+        0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+#account-form h1 {
+    position: relative;
+    margin: 0.5em 0 0 0;
+    font-size: 40px;
+    font-family: 'logo';
+    text-transform: uppercase;
+    color: transparent;
+    background-image: linear-gradient(to right, rgb(44, 235, 178), rgb(89, 18, 100));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+#account-form a {
+    font-weight: bold;
+}
+
+.form-group {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-group .icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 40px;
+}
+
+.form-group .icon ion-icon {
+    transform: scale(1.5);
+}
+
+.form-group input {
+    padding: 5px 2em;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: 0;
+    font-size: 18px;
+    background: transparent;
+}
+
+.form-group .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: transparent;
+    transition: 0.8s;
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    padding-left: 2em;
+    height: 20px;
+    transition: 0.2s;
+    color: #9b9b9b;
+    pointer-events: none;
+}
+
+.form-group input:focus ~ .line,
+.form-group input:valid ~ .line {
+    width: 100%;
+    background-image: linear-gradient(to right, var(--item-bg-color), var(--item-bg-rev-color));
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+    padding: 0;
+    top: -10px;
+    color: var(--item-bg-color);
+    font-weight: 700;
+}
+
+#account-form p {
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    margin: 5px 0;
+    width: 100%;
+}
