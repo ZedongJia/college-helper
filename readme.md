@@ -24,12 +24,12 @@
 + 用户中心：含个人主页（展示隐私设置下的信息和收藏记录）、个人信息修改（基本信息、密码、隐私权限）、历史记录和收藏记录查看、私信聊天。
 
 ## 四、系统展示
-![fig1](figs/fig1)
+![fig1](figs/fig1.png)
 
-![fig2](figs/fig2)
+![fig2](figs/fig2.png)
 
-![fig3](figs/fig3)
+![fig3](figs/fig3.png)
 
-![fig4](figs/fig4)
+![fig4](figs/fig4.png)
 
-![fig5](figs/fig5)
+![fig5](figs/fig5.png)
